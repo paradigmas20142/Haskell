@@ -3,6 +3,6 @@ data ArvBin a = Null
 
 searchString :: ArvBin a -> String -> Bool
 searchString Null value = False
-searchString (No x left right) valor 
+searchString (No x left right) value 
 	| value == x = True
  	| otherwise = False || (searchString left value) || (searchString right value)
