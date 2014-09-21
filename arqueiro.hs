@@ -4,16 +4,17 @@ data Tree a = Null
 historyTree :: Tree [Char]
 historyTree = 
   Node "Arqueiro"
-    (Node "floresta" (Node "dentro" (Node "cipos" Null Null) (Node "escadaria" Null Null)) (Node "fora" Null Null))
-    (Node "montanha" (Node "dentro" Null Null) (Node "fora" (Node "escalando" Null Null) (Node "estilingue" Null Null)))
-    
-
-searchString :: Tree [Char] -> [Char] -> [Char]
-searchString Null value = ""
-searchString (Node x left right) value 
-	| value == x = x
- 	| value /= x = (searchString left value)
-
+    (Node "floresta" 
+	(Node "dentro" 
+		(Node "cipos" Null Null) 
+		(Node "escadaria" Null Null)) 
+	(Node "fora" Null Null))
+    (Node "montanha" 
+	(Node "dentro" Null Null) 
+	(Node "fora" 
+		(Node "escalando" Null Null) 
+		(Node "estilingue" Null Null)))
+  
 breakTree :: Tree [Char] -> String -> Tree [Char]
 breakTree Null value = Null
 breakTree (Node a left right) value
@@ -58,9 +59,7 @@ main = do
 
   --Level 4 tree
   if choice3 == "escadaria" then print ("Parabens! Voce ganhou o jogo!!") 
-  else print ("Voce perdeu o jogo!")
+  else print ("Voce perdeu o jogo!!") 
   
- 
-
   return ()
   
