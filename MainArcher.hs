@@ -1,9 +1,9 @@
-module MainArcher where
+module MainArcher(mainArcher) where
 
 import FunctionsTree(historyTree, breakTree, printNode)
 
-main :: IO ()	
-main = do
+mainArcher :: IO ()	
+mainArcher = do
   let montain = (breakTree historyTree "right") -- Tree: montain
   let forest = (breakTree historyTree "left") -- Tree: forest
   let withinCityBones =  (breakTree forest "left") -- Tree: within the city of bones
