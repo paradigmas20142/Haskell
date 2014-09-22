@@ -22,7 +22,6 @@ breakTree Null value = Null
 breakTree (Node a left right) value
 	| value == "right" = right
 	| value == "left" = left
-	| value == "all" = (Node a left right)
 
 printNode :: Tree [Char] -> [Char]
 printNode Null = ""
