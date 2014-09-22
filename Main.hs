@@ -1,6 +1,7 @@
 module Main where
 
 import MainArcher(mainArcher)
+import MainWarrior(mainArrior)
 
 main :: IO ()
 main = do
