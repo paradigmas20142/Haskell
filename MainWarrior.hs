@@ -1,7 +1,9 @@
+module MainWarrior(mainWarrior) where
+
 import System.IO
 import Control.Monad
-  data Tree a = Empty
-| Node String (Tree a) (Tree a) 
+data Tree a = Empty
+  | Node String (Tree a) (Tree a) 
 
 
 historyTree :: Tree [Char]
@@ -58,4 +60,4 @@ mainWarrior = do
   if choice3 == "cipos" then print ("Parabens! Voce ganhou o jogo!!") 
   else print ("Voce perdeu o jogo!!") 
 
-return ()
+  return ()
